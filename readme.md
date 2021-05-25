@@ -61,3 +61,6 @@ A list of recommendations and proposed architecture for use of Client Crendentia
    - Validate appidacr  claim to be of value 2 if you require strong authentication of the client app (client credentials with certificate)
   
 
+#### References
+There is also great existing blog on validation of the tokens on resource side by Joonas Westlin
+https://joonasw.net/view/always-check-token-permissions-in-aad-protected-api 
