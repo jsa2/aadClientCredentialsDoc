@@ -1,5 +1,5 @@
 # Azure AD Client Credentials Architecture Guide for single tenant apps  (draft version)
-This is simple list of recommendations and single proposed architecture for use of Client Crendentials in a use case where you want/need to separate client app and api registrations in Azure AD
+A list of recommendations and proposed architecture for use of Client Crendentials for use case where you need to separate client app and api registrations in Azure AD.
 ## Designing client and API app registrations
 ![img](img/6.png)
 ### About roles / scopes
@@ -45,6 +45,8 @@ This is simple list of recommendations and single proposed architecture for use 
 1. Separate different back-end services with their own clientId (new app registration in Azure AD) so that you know which back-end services is calling the resource, and you don't end up sharing multiple credentials of single client app
 2. Require user assignment if you want to prevent arbitrary SPN’s in the tenant creating tokens with valid audience 
    - No access token is returned for clients which are not assigned (kudos for [Johan Lindroos](https://www.linkedin.com/in/johanlindroos/) for proposing this as neat fix)
+[img](img/7.png))
+
 3. Don't enable redirect-uri's for app registrations used only for client credentials based flows 
  - When possible opt for using dedicated app registrations for client credentials based flows. This provides segregation between use cases (delegated/app permissions) and your app won't have attack surface of two different app models (delegated / app permissions)
 4. Use Client credentials based on certificate instead of password based credential [link](https://docs.microsoft.com/en-us/azure/active-directory/develop/identity-platform-integration-checklist#security)
