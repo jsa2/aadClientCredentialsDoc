@@ -58,7 +58,7 @@ A list of recommendations and proposed architecture for use of Client Crendentia
 4. Use Client credentials based on certificate instead of password based credential [link](https://docs.microsoft.com/en-us/azure/active-directory/develop/identity-platform-integration-checklist#security)
 ![img](img/4.png)
 ![img](img/5%20certcred.png)
-
+- certcred example repo [https://github.com/jsa2/aadClientCredWithCert](https://github.com/jsa2/aadClientCredWithCert)
 #### API (resource) app Registrations
 1. Don't enable redirect-uri's for app registrations representing the API. After all its the client app registration which is authenticating, not the API requesting tokens for itself
 2. In the resource service always besides validating tokens for issuer and audience:
