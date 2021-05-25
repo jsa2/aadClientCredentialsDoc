@@ -46,7 +46,7 @@ A list of recommendations and proposed architecture for use of Client Crendentia
 2. Require user assignment if you want to prevent arbitrary SPN’s in the tenant creating tokens with valid audience 
    - No access token is returned for clients which are not assigned (kudos for [Johan Lindroos](https://www.linkedin.com/in/johanlindroos/) for proposing this as neat fix)
   
-[!img](img/7.png))
+[!img](img/7.png)
 
 1. Don't enable redirect-uri's for app registrations used only for client credentials based flows 
  - When possible opt for using dedicated app registrations for client credentials based flows. This provides segregation between use cases (delegated/app permissions) and your app won't have attack surface of two different app models (delegated / app permissions)
