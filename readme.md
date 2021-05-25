@@ -18,7 +18,7 @@ A list of recommendations and proposed architecture for use of Client Crendentia
 2. Role definition (Configured in the API app Registration) If you want to assign roles for the client app registration, use app roles in the app registration for the API to achieve that
 ![img](img/1.png)
 3. Role assignment (Configured in the Client app Registration) under "API permissions"
-![img](img/2.png)'
+![img](img/2.png)
 - Example of token with roles received by the client app registration 
 ```js
 //
