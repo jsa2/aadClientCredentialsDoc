@@ -1,5 +1,11 @@
 # Azure AD Client Credentials Architecture Guide for single tenant apps  (draft version)
 A list of recommendations and proposed architecture for use of Client Crendentials for use case where you need to separate client app and api registrations in Azure AD.
+- [Azure AD Client Credentials Architecture Guide for single tenant apps  (draft version)](#azure-ad-client-credentials-architecture-guide-for-single-tenant-apps--draft-version)
+  - [Designing client and API app registrations](#designing-client-and-api-app-registrations)
+    - [About roles / scopes](#about-roles--scopes)
+      - [Client App Registrations](#client-app-registrations)
+      - [API (resource) app Registrations](#api-resource-app-registrations)
+      - [References](#references)
 ## Designing client and API app registrations
 ![img](img/6.png)
 ### About roles / scopes
