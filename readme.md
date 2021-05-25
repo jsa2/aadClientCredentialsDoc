@@ -62,5 +62,6 @@ A list of recommendations and proposed architecture for use of Client Crendentia
   
 
 #### References
-There is also great existing blog on validation of the tokens on resource side by Joonas Westlin
+There is also great existing blog on validation of the tokens on resource side by Joonas Westlin 
+"Attacking an API that does not check permissions"
 https://joonasw.net/view/always-check-token-permissions-in-aad-protected-api 
