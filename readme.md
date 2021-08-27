@@ -15,6 +15,11 @@ A list of recommendations and proposed architecture for use of Client Crendentia
   
 ---
 
+<ul>
+    <li><input type="checkbox" checked> First task</li>
+    <li><input type="checkbox"> Second task</li>
+</ul>
+
 ## Checklist
 
 - [ ] Require User assignment on the API app 
