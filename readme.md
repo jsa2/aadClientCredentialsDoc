@@ -52,14 +52,14 @@ A list of recommendations and proposed architecture for use of Client Crendentia
 - [Azure AD Client Credentials Architecture Guide for single tenant apps  (draft version)](#azure-ad-client-credentials-architecture-guide-for-single-tenant-apps--draft-version)
   - [Checklist](#checklist)
   - [Checklist for Function App Authentication](#checklist-for-function-app-authentication)
-  - [Designing client and API app registrations](#designing-client-and-api-app-registrations)
+  - [Designing client and API App Registrations](#designing-client-and-api-app-registrations)
     - [About roles / scopes](#about-roles--scopes)
       - [Client App Registrations](#client-app-registrations)
-      - [API (resource) app Registrations](#api-resource-app-registrations)
+      - [API (resource) App Registrations](#api-resource-app-registrations)
       - [References](#references)
 
 
-## Designing client and API app registrations
+## Designing client and API App Registrations
 ![img](img/6.png)
 ### About roles / scopes
 1. Scopes are not used If you are using Azure AD Client Credential Based flow
@@ -106,8 +106,8 @@ A list of recommendations and proposed architecture for use of Client Crendentia
    - No access token is returned for clients which are not assigned (kudos for [Johan Lindroos](https://www.linkedin.com/in/johanlindroos/) for proposing this as neat fix!)
 ![img](img/7.png)
 
-3. Don't enable redirect-uri's forApp Registrationsused only for client credentials based flows 
- - When possible opt for using dedicatedApp Registrationsfor client credentials based flows. This provides segregation between use cases (delegated/app permissions) and your app won't have attack surface of two different app models (delegated / app permissions)
+3. Don't enable redirect-uri's for App Registration sused only for client credentials based flows 
+ - When possible opt for using dedicated App Registrations for client credentials based flows. This provides segregation between use cases (delegated/app permissions) and your app won't have attack surface of two different app models (delegated / app permissions)
 4. Use Client credentials based on certificate instead of password based credential [link](https://docs.microsoft.com/en-us/azure/active-directory/develop/identity-platform-integration-checklist#security)
 ![img](img/4.png)
 ![img](img/5%20certcred.png)
@@ -119,8 +119,8 @@ A list of recommendations and proposed architecture for use of Client Crendentia
 
 
 
-#### API (resource) app Registrations
-1. Don't enable redirect-uri's forApp Registrationsrepresenting the API. After all its the client app registration which is authenticating, not the API requesting tokens for itself
+#### API (resource) App Registrations
+1. Don't enable redirect-uri's for App Registrations representing the API. After all its the client app registration which is authenticating, not the API requesting tokens for itself
 2. In the resource service always besides validating tokens for issuer and audience:
    - Validate clientId (appId claim) against allowed clients (this is important if you are not requiring role assignment) for the resource API
    - Validate role claims
