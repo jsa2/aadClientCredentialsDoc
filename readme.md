@@ -33,8 +33,10 @@ A list of recommendations and proposed architecture for use of Client Crendentia
 
 ## Checklist for Function App Authentication
  <li><input type="checkbox"> Remove redirect URI's in API's not redirecting users for token retrieval
-<li><input type="checkbox"> Remove token store in API's servicing only consumers based on client credentials
+<li><input type="checkbox"> Remove token store in API's servicing only consumers based on client credentials </li>
+
 ![img](img/TokenStore.png)
+
 <li><input type="checkbox"> Remove client secret in the API's servicing only consumers based on client credentials
   
   - To do this task without breaking the function app, retain the app setting, but overwrite the value. 
