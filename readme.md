@@ -27,6 +27,8 @@ A list of recommendations and proposed architecture for use of Client Crendentia
 - [ ] Remove client secret in the API's servicing only consumers based on client credentials
 - [ ] On the party validating the claims ensure at least that **appid** and audience value is always checked 
 - [ ] On the party validating the claims ensure that value **appidacr** is 2 (this applies when all the consumers of the api use managed identity, or client credentials with certificate)
+- [ ] Ensure App Registration has up to date list of owners
+- [ ] In Azure Services prefer system assigned identity (Ensures that Azure AD Object Lifecycle is tied to the Azure Resource)
 
 ## Checklist for Function App Authentication
 - [ ] Remove redirect URI's in API's not redirecting users for token retrieval 
