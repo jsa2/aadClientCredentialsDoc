@@ -106,7 +106,7 @@ A list of recommendations and proposed architecture for use of Client Crendentia
    - No access token is returned for clients which are not assigned (kudos for [Johan Lindroos](https://www.linkedin.com/in/johanlindroos/) for proposing this as neat fix!)
 ![img](img/7.png)
 
-3. Don't enable redirect-uri's for App Registration sused only for client credentials based flows 
+3. Don't enable redirect-uri's for App Registrations used only for client credentials based flows 
  - When possible opt for using dedicated App Registrations for client credentials based flows. This provides segregation between use cases (delegated/app permissions) and your app won't have attack surface of two different app models (delegated / app permissions)
 4. Use Client credentials based on certificate instead of password based credential [link](https://docs.microsoft.com/en-us/azure/active-directory/develop/identity-platform-integration-checklist#security)
 ![img](img/4.png)
