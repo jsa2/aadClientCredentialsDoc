@@ -16,7 +16,7 @@ A list of recommendations and proposed architecture for use of Client Crendentia
 ---
 
 ## Checklist
-
+<ul>
  <li><input type="checkbox"> Require User assignment on the API app </li>
   
   ![img](img/userassign.png)
@@ -30,6 +30,7 @@ A list of recommendations and proposed architecture for use of Client Crendentia
 <li><input type="checkbox"> On the party validating the claims ensure that value appidacr is 2 (this applies when all the consumers of the api use managed identity, or client credentials with certificate)
 <li><input type="checkbox"> Ensure App Registration has up to date list of owners
 <li><input type="checkbox"> In Azure Services prefer system assigned identity (Ensures that Azure AD Object Lifecycle is tied to the Azure Resource)
+</ul>
 
 ## Checklist for Function App Authentication
  <li><input type="checkbox"> Remove redirect URI's in API's not redirecting users for token retrieval
