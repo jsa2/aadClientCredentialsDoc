@@ -1,5 +1,13 @@
 # Azure AD Client Credentials Architecture Guide for single tenant apps  (draft version)
 A list of recommendations and proposed architecture for use of Client Crendentials for use case where you need to separate client app and api registrations in Azure AD.
+
+---
+**Update**
+
+- Added example of API app creation for [functions](apiApp.md) 
+
+---
+
 - [Azure AD Client Credentials Architecture Guide for single tenant apps  (draft version)](#azure-ad-client-credentials-architecture-guide-for-single-tenant-apps--draft-version)
   - [Designing client and API app registrations](#designing-client-and-api-app-registrations)
     - [About roles / scopes](#about-roles--scopes)
@@ -58,7 +66,14 @@ A list of recommendations and proposed architecture for use of Client Crendentia
 4. Use Client credentials based on certificate instead of password based credential [link](https://docs.microsoft.com/en-us/azure/active-directory/develop/identity-platform-integration-checklist#security)
 ![img](img/4.png)
 ![img](img/5%20certcred.png)
-- certcred example repo [https://github.com/jsa2/aadClientCredWithCert](https://github.com/jsa2/aadClientCredWithCert)
+
+**Microsoft reference** <br>
+[*While it's convenient to use password secrets as a credential, we strongly recommend that you use x509 certificates as the only credential type for getting tokens for your application.*](https://docs.microsoft.com/en-us/azure/active-directory/develop/security-best-practices-for-app-registration#credential-configuration)
+
+- certcred example repo for NodeJS [https://github.com/jsa2/aadClientCredWithCert](https://github.com/jsa2/aadClientCredWithCert)
+
+
+
 #### API (resource) app Registrations
 1. Don't enable redirect-uri's for app registrations representing the API. After all its the client app registration which is authenticating, not the API requesting tokens for itself
 2. In the resource service always besides validating tokens for issuer and audience:
@@ -71,3 +86,7 @@ A list of recommendations and proposed architecture for use of Client Crendentia
 There is also great existing blog on validation of the tokens on resource side by Joonas Westlin 
 "Attacking an API that does not check permissions"
 https://joonasw.net/view/always-check-token-permissions-in-aad-protected-api 
+
+[Microsoft Best Practice on App Registrations](https://docs.microsoft.com/en-us/azure/active-directory/develop/security-best-practices-for-app-registration)
+
+[Azure Security Benchmark V2 for Application Identities: IM-2: Manage application identities securely and automatically](https://docs.microsoft.com/en-us/security/benchmark/azure/security-controls-v2-identity-management#im-2-manage-application-identities-securely-and-automatically)
