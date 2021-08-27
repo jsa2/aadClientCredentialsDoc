@@ -9,7 +9,6 @@ Configuration example on Premium plan, but similar config is also possible with 
     - [Create Roles for Client apps](#create-roles-for-client-apps)
     - [Grant roles to Client apps](#grant-roles-to-client-apps)
       - [Example for managed identity](#example-for-managed-identity)
-    - [Additional hardening regarding client secret](#additional-hardening-regarding-client-secret)
     - [Other](#other)
 
 **Picture: Example using APIM managed identity and Function**
@@ -56,14 +55,6 @@ New-AzureADServiceAppRoleAssignment `
 ``` 
 
 --- 
-### Additional hardening regarding client secret
-
-At default the authentication experience (new) stores the client secret as plaintext value into app settings. 
-
-If you want to see audit trail for all users who read the secret from app settings (by going into key vault then, not from the runtime) 
-
-
----
 
 ### Other 
 [Requesting access tokens with managed identity on API management ](https://securecloud.blog/2021/02/11/azure-api-management-call-azure-functions-with-managed-identity/)
