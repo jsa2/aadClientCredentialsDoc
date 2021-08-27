@@ -15,35 +15,33 @@ A list of recommendations and proposed architecture for use of Client Crendentia
   
 ---
 
-<ul>
-    <li><input type="checkbox" checked> First task</li>
-    <li><input type="checkbox"> Second task</li>
-</ul>
-
 ## Checklist
 
-- [ ] Require User assignment on the API app 
+ <li><input type="checkbox"> Require User assignment on the API app </li>
   
   ![img](img/userassign.png)
+ <li><input type="checkbox"> Remove redirect URI's in API's not redirecting users for token retrieval
+<li><input type="checkbox"> Use Certificate Credentials in API consumers based on client credential flow 
+<li><input type="checkbox"> Separate different consumers of the service to different App Registrations
 
-- [ ] Use Certificate Credentials in API consumers based on client credential flow 
-- [ ] Separate different consumers of the service to different App Registrations
   - In other words do not create multiple secrets under single App Registrations to segregate consumers from each other, instead use separate App Registrations 
-- [ ] Remove client secret in the API's servicing only consumers based on client credentials
-- [ ] On the party validating the claims ensure at least that **appid** and audience value is always checked 
-- [ ] On the party validating the claims ensure that value **appidacr** is 2 (this applies when all the consumers of the api use managed identity, or client credentials with certificate)
-- [ ] Ensure App Registration has up to date list of owners
-- [ ] In Azure Services prefer system assigned identity (Ensures that Azure AD Object Lifecycle is tied to the Azure Resource)
+<li><input type="checkbox"> Remove client secret in the API's servicing only consumers based on client credentials
+<li><input type="checkbox"> On the party validating the claims ensure at least that appid and audience value is always checked 
+<li><input type="checkbox"> On the party validating the claims ensure that value appidacr is 2 (this applies when all the consumers of the api use managed identity, or client credentials with certificate)
+<li><input type="checkbox"> Ensure App Registration has up to date list of owners
+<li><input type="checkbox"> In Azure Services prefer system assigned identity (Ensures that Azure AD Object Lifecycle is tied to the Azure Resource)
 
 ## Checklist for Function App Authentication
-- [ ] Remove redirect URI's in API's not redirecting users for token retrieval 
-- [ ] Remove token store in API's servicing only consumers based on client credentials
+ <li><input type="checkbox"> Remove redirect URI's in API's not redirecting users for token retrieval
+<li><input type="checkbox"> Remove token store in API's servicing only consumers based on client credentials
 ![img](img/TokenStore.png)
-- [ ] Remove client secret in the API's servicing only consumers based on client credentials
+<li><input type="checkbox"> Remove client secret in the API's servicing only consumers based on client credentials
+  
   - To do this task without breaking the function app, retain the app setting, but overwrite the value. 
   ![img](img/optionalHardening.png)
   - There is no word if this is unsupported (or supported for that matter) - based on my testing (and logic) there should be no reason why the client secret is needed on API that does not request tokens for itself or users 
-- [ ] Ensure Azure AD ServicePrincipal Logs are enabled in Azure AD Diagnostic settings
+  
+<li><input type="checkbox"> Ensure Azure AD ServicePrincipal Logs are enabled in Azure AD Diagnostic settings
 
 ![img](img/spnLog.png)
 
