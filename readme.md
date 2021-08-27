@@ -21,9 +21,9 @@ A list of recommendations and proposed architecture for use of Client Crendentia
   
   ![img](img/userassign.png)
 
-- [ ] Use Certificate Credentials in clients based on client credential flow calling the API
-- [ ] Separate different consumers of the service to differentApp Registrations
-  - In other words do not create multiple secrets under single app to segregate consumers from each other, instead use separate App Registrations 
+- [ ] Use Certificate Credentials in API consumers based on client credential flow 
+- [ ] Separate different consumers of the service to different App Registrations
+  - In other words do not create multiple secrets under single App Registrations to segregate consumers from each other, instead use separate App Registrations 
 - [ ] Remove client secret in the API's servicing only consumers based on client credentials
 - [ ] On the party validating the claims ensure at least that **appid** and audience value is always checked 
 - [ ] On the party validating the claims ensure that value **appidacr** is 2 (this applies when all the consumers of the api use managed identity, or client credentials with certificate)
