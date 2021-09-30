@@ -112,7 +112,7 @@ A list of recommendations and proposed architecture for use of Client Crendentia
 ![img](img/4.png)
 ![img](img/5%20certcred.png)
 
-#### Microsoft reference <br>
+#### Microsoft reference
 [*While it's convenient to use password secrets as a credential, we strongly recommend that you use x509 certificates as the only credential type for getting tokens for your application.*](https://docs.microsoft.com/en-us/azure/active-directory/develop/security-best-practices-for-app-registration#credential-configuration)
 
 - certcred example repo for NodeJS [https://github.com/jsa2/aadClientCredWithCert](https://github.com/jsa2/aadClientCredWithCert)
